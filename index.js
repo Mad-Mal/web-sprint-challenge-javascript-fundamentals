@@ -17,8 +17,8 @@ myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
 
-
-
+// nestedFunction is able to access variable internal because of closure. Being inside of the nested function anything can reach out and use what is there but nothing can reach in.
+// on top of that, internal is a const variable which causes it to have global scope.
 
 
 /* 🚀🚀🚀 Task 2: Counter 🚀🚀🚀 */
@@ -28,10 +28,13 @@ myFunction();
     
 For example, `summation(4)` should return 10 because 1+2+3+4 is 10. Note, you may use a for loop for this function if you wish */
 
-function summation(/*Your Code Here*/) {
-  /*Your Code Here*/
-
+function summation(number) {
+  let sum = 0;
+  for (let i = 1; i <= number; i++) {
+    sum += i;
   }
+  return sum;
+  };
  
 
 // 🦁🦁🦁 Topic 2: ADVANCED Array Methods 🦁🦁🦁
@@ -56,8 +59,12 @@ const zooAnimals = [
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
 
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function animalNames(array){
+    displayNames = [];
+    array.forEach((data) => {
+        displayNames.push(`name: ${data.animal_name}, scientific: ${data.scientific_name}`);
+    });
+    return displayNames;
   }
   
 
@@ -67,8 +74,11 @@ const zooAnimals = [
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowerCaseNames(array){
+    const lowerCase = array.map((data) => {
+        return data.animal_name.toLowerCase();
+    });
+    return lowerCase;
   }
   
   
@@ -77,8 +87,14 @@ const zooAnimals = [
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
+  function lowPopulationAnimals(array){
+    newArray= [];
+    for(let i = 0; i < array.length; i++) {
+      if(array[i].population < 5){
+        newArray.push(array[i]);
+      };
+    };
+    return newArray;
   }
   
 
