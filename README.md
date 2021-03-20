@@ -28,15 +28,18 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read.
 
 1. Briefly compare and contrast `.forEach` & `.map` (2-3 sentences max)
-
+.map will return a new array after it loops over the array while forEach does not return a new array.
 2. Explain the difference between a callback and a higher order function.
-
+higher order functions take a dif function as an argument and returns a function to its caller while a callback function is passed to a function expecting the other function to call it.
 3. What is closure?
-
+closure uses the idea of scope, it pretty much says if something is inside of a function than it cannot be taken out but that particular thing can reach out of the function and use what it needs to.
 4. Describe the four rules of the 'this' keyword.
-
+    1. function in a global scope set the value of 'this' to the window object.
+    2. functions called by the previous dot than the object before the dot is 'this'
+    3. constructor function sets 'this' to the specific instance.
+    4. call and apply explicitly state 'this'
 5. Why do we need super() in an extended class?
-
+super() allows the extended class to recieve the parameters that the base class starts with.
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade. 
 
 ## Instructions
